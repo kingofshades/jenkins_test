@@ -22,7 +22,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout([$class: 'GitSCM',
-                          branches: [[name: '*/main']],
+                          branches: [[name: '*/']],
                           userRemoteConfigs: [[url: env.GIT_REPO,
                                                credentialsId: env.GIT_CREDS]]])
             }
